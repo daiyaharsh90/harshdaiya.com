@@ -105,7 +105,7 @@ S2. NAVBAR
 }
 
 .navbar-fixed-top.scrolled {
-  background-color: rgba(34, 34, 34, 0.95) !important;
+  background-color: rgba(34, 34, 34, 0.60) !important;
   transition: background-color 1000ms linear;
 }
 
