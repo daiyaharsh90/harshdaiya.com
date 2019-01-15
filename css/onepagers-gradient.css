@@ -373,6 +373,8 @@ S11. DEMO STYLES
   overflow: hidden;
   padding-top: 90%;
   position: relative;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
 }
 
 .iframe-container iframe {
