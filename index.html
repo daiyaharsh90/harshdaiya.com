@@ -10,12 +10,12 @@
 
   <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
   <!-- Bootstrap -->
-  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="./css/onepagers-gradient.css" rel="stylesheet">
   <link href="./css/gradients.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -69,7 +69,7 @@
             <i class="fab fa-linkedin-in"></i> LinkedIn<span class="btnversion"></span></a>
           <a class="btn btn-info btn-lg bigger-btn btn-trans" href="https://github.com/daiyaharsh90">
             <i class="fab fa-github"></i> Github<span class="btnversion"></span></a>
-         <!-- <a class="btn btn-info btn-lg bigger-btn btn-trans" href="https://harshdaiya.com">
+          <!-- <a class="btn btn-info btn-lg bigger-btn btn-trans" href="https://harshdaiya.com">
             <i class="far fa-file"></i> Resume<span class="btnversion"></span></a>-->
           <!-- END SECTION 1 CONTENT -->
         </div>
@@ -85,49 +85,48 @@
     <!-- Start SECTION 2 -->
     <div class="row">
       <div class="col-md-12 leadsection innershadow nepal" id="section2">
-          <p class="lead">Résumé</b></p>
-          <br>
-          <div class="wrapper">
-              <div class="iframe-container">
-                <iframe src="https://daiyaharsh90.github.io/resume/" frameborder="0" ></iframe>
-              </div>
-            </div>
+        <p class="lead">Résumé</b></p>
+        <br>
+        <div class="wrapper">
+          <div class="iframe-container">
+            <iframe src="https://daiyaharsh90.github.io/resume/" frameborder="0"></iframe>
+          </div>
+        </div>
 
       </div>
       <!-- END SECTION 2 -->
-     
-  </div>
-  <!--/container final closing tag-->
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="./js/bootstrap.min.js"></script>
-  <script>
-    $(function () {
-      $(document).scroll(function () {
-        var $nav = $(".navbar-fixed-top");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > 200);
+    </div>
+    <!--/container final closing tag-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".navbar-fixed-top");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > 200);
+        });
       });
-    });
 
-    $('body').scrollspy({
-      target: '#topnav'
-    })
+      $('body').scrollspy({
+        target: '#topnav'
+      })
 
-    // DELETE THIS SECTION START
-    // DEMO GRADIENTS
-    $('.demowell').hover(
-      function () {
-        $(this).addClass('gradient-inverse')
-      },
-      function () {
-        $(this).removeClass('gradient-inverse')
-      }
-    )
-    //DELETE THIS SECTION END
-
-</script>
+      // DELETE THIS SECTION START
+      // DEMO GRADIENTS
+      $('.demowell').hover(
+        function () {
+          $(this).addClass('gradient-inverse')
+        },
+        function () {
+          $(this).removeClass('gradient-inverse')
+        }
+      )
+      //DELETE THIS SECTION END
+    </script>
 </body>
 
 </html>
