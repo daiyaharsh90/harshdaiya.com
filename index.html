@@ -9,6 +9,7 @@
     <title>harshdaiya.com</title>
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Linkedin -->
  
     <!-- Bootstrap -->
@@ -267,6 +268,12 @@
                       <form
                           action="https://submit-form.com/aX3ocUYg"
                           method="POST" encType="multipart/form-data">
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LeGwZ8fAAAAAPjVGgGHiJtKCFGw6FkvJifgI5VU"
+        data-callback="callback"
+      ></div>
+      <br />
                           <div class="form-group">
                               <label>Your Email</label>
                               <input type="email" class="form-control input-lg" name="_replyto"
@@ -283,8 +290,15 @@
                                   name="message" required></textarea>
                           </div>
                           <button type="submit" class="btn btn-success btn-lg btn-trans"
-                              value="Send">Submit</button>
+                              value="Send" disabled>Submit</button>
+                          
                       </form>
+                      <script type="text/javascript">
+      function callback() {
+        const submitButton = document.getElementById("submit-button");
+        submitButton.removeAttribute("disabled");
+      }
+    </script>
 
                       <!--END CONTACT FORM-->
                   </div>
