@@ -9,6 +9,7 @@
     <title>harshdaiya.com</title>
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+    <script src="https://unpkg.com/@botpoison/browser" async></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Linkedin -->
  
@@ -266,8 +267,10 @@
                       <!-- START CONTACT FORM -->
                       
                       <form
-                          action="https://submit-form.com/aX3ocUYg"
-<!--                           method="POST" encType="multipart/form-data"> -->
+                            method="POST"
+      action="https://submit-form.com/aX3ocUYg"
+      data-botpoison-public-key="pk_a06bbe43-bfed-4818-8a65-bc84131df245"
+      target="_blank">
 
                           <div class="form-group">
                               <label>Your Email</label>
@@ -284,24 +287,24 @@
                               <textarea class="form-control input-lg" rows="5" cols="10" placeholder="Message"
                                   name="message" required></textarea>
                           </div>
-                          <br />
+<!--                           <br />
       <div 
         class="g-recaptcha"
         data-sitekey="6LeGwZ8fAAAAAPjVGgGHiJtKCFGw6FkvJifgI5VU"
         data-callback="callback">
       </div>
-                          <br />
+                          <br /> -->
                           <button id="submit-button" type="submit" class="btn btn-success btn-lg btn-trans"
-                              value="Send" disabled>Submit</button>
+                              value="Send">Submit</button>
      
                           
                       </form>
-                      <script type="text/javascript">
+<!--                       <script type="text/javascript">
       function callback() {
         const submitButton = document.getElementById("submit-button");
         submitButton.removeAttribute("disabled");
       }
-    </script>
+    </script> -->
 
                       <!--END CONTACT FORM-->
                   </div>
