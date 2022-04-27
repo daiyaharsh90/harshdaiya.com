@@ -268,7 +268,8 @@
                       
                       <form
                             method="POST"
-                            action="https://submit-form.com/aX3ocUYg">
+                            action="https://submit-form.com/aX3ocUYg"
+                            data-botpoison-public-key="pk_a06bbe43-bfed-4818-8a65-bc84131df245">
 
                           <div class="form-group">
                               <label>Your Email</label>
@@ -286,15 +287,27 @@
                                   name="message" required></textarea>
                           </div>
                           <br />
-      <div 
+<!--       <div 
         class="g-recaptcha"
         data-sitekey="6LeGwZ8fAAAAAPjVGgGHiJtKCFGw6FkvJifgI5VU"
         data-callback="callback">
-      </div>
+      </div> -->
                           <br />
-                          <button id="submit-button" type="submit" class="btn btn-success btn-lg btn-trans"
-                              value="Send" disabled>Submit</button>
-     
+                          <button id="button" type="submit" class="btn btn-success btn-lg btn-trans"
+                              value="Send">Submit</button>
+     <script>
+  var formElement = document.getElementById("form");
+  var buttonElement = document.getElementById("button");
+  formElement.addEventListener("botpoison-challenge-start", function () {
+    buttonElement.setAttribute("disabled", "disabled");
+  });
+  formElement.addEventListener("botpoison-challenge-success", function () {
+    buttonElement.removeAttribute("disabled");
+  });
+  formElement.addEventListener("botpoison-challenge-error", function () {
+    buttonElement.removeAttribute("disabled");
+  });
+</script>
                           
                       </form>
                       <script type="text/javascript">
