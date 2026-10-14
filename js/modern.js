@@ -574,7 +574,7 @@
 
   // --- 9. INTERACTIVE AI CHATBOT ASSISTANT ---
   const chatbotKnowledge = {
-    skills: "Harsh specializes in Distributed Systems, High-Throughput Risk Platforms, Real-Time Fraud Mitigation, MLOps, Java, Go, Python, Apache Kafka, Apache Flink, Redis, and Kubernetes.",
+    skills: "Harsh specializes in AI & Agentic development (LangChain, LangGraph, autonomous multi-agent workflows), RAG architectures, Vector DBs (Pinecone, Milvus, ChromaDB), Distributed Systems, High-Throughput Risk Platforms, MLOps, Java, Go, Python, Apache Kafka, Apache Flink, Redis, and Kubernetes.",
     role: "Harsh Daiya is a Staff Software Engineer at PayPal, architecting real-time risk platform infrastructure protecting billions of dollars in daily commerce volume.",
     book: "Harsh authored 'The Future of Fintech: AI in Risk Management and Fraud Prevention', exploring how real-time AI and machine learning reshape financial security.",
     advisory: "Harsh advises early-stage fintech, health tech, and AI startups on architectural scalability, fraud defense, and team scaling. You can connect via the contact form or LinkedIn.",
@@ -638,7 +638,7 @@
       input.value = '';
 
       setTimeout(() => {
-        if (q.includes('skill') || q.includes('stack') || q.includes('technolog')) {
+        if (q.includes('skill') || q.includes('stack') || q.includes('technolog') || q.includes('agent') || q.includes('rag') || q.includes('langchain') || q.includes('vector') || q.includes('llm')) {
           appendMessage(chatbotKnowledge.skills);
         } else if (q.includes('book') || q.includes('author') || q.includes('publish')) {
           appendMessage(chatbotKnowledge.book);
@@ -697,9 +697,11 @@ Author of "The Future of Fintech", angel investor, top ADPList mentor, and avid 
 • Low-latency distributed feature streaming (sub-25ms SLA) with Kafka, Flink, and Redis.
 • Production AI/ML fraud decision engine integration.`,
 
-      skills: () => `[DISTRIBUTED SYSTEMS] : Java, Go, Python, Spring Boot, Microservices, gRPC
-[STREAMING & DATA]    : Apache Kafka, Apache Flink, Apache Spark, Redis, Cassandra
-[RISK & AI/MLOPS]     : Real-time Decision Engines, Feature Stores, PyTorch, Fraud Detection
+      skills: () => `[AI & AGENTIC DEV]   : Autonomous Agents, LangChain, LangGraph, Multi-Agent Systems, Tool Calling
+[RAG & VECTOR DBS]    : RAG Architecture, Pinecone, Milvus, ChromaDB, LlamaIndex, Semantic Search
+[DISTRIBUTED SYSTEMS] : Java, Go, Python, Spring Boot, Microservices, gRPC, High Concurrency
+[STREAMING & DATA]    : Apache Kafka, Apache Flink, Apache Spark, Redis, Cassandra, Elasticsearch
+[RISK & MLOPS]        : Real-time Decision Engines, Feature Stores, PyTorch, Anomaly Detection
 [INFRASTRUCTURE]      : Kubernetes, Docker, AWS, GCP, Terraform, CI/CD, Observability`,
 
       book: () => `"The Future of Fintech: AI in Risk Management and Fraud Prevention"
