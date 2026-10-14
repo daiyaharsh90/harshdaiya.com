@@ -577,6 +577,7 @@
     skills: "Harsh specializes in AI & Agentic development (LangChain, LangGraph, autonomous multi-agent workflows), RAG architectures, Vector DBs (Pinecone, Milvus, ChromaDB), Distributed Systems, High-Throughput Risk Platforms, MLOps, Java, Go, Python, Apache Kafka, Apache Flink, Redis, and Kubernetes.",
     role: "Harsh Daiya is a Staff Software Engineer at PayPal, architecting real-time risk platform infrastructure protecting billions of dollars in daily commerce volume.",
     book: "Harsh authored 'The Future of Fintech: AI in Risk Management and Fraud Prevention', exploring how real-time AI and machine learning reshape financial security.",
+    papers: "Harsh has published 4 peer-reviewed research papers cited 56+ times on Google Scholar, covering AI-driven risk management, explainable AI in payment systems, and ensemble models for financial risk. View his Google Scholar profile: https://scholar.google.com/citations?hl=en&user=ZUFed4EAAAAJ",
     advisory: "Harsh advises early-stage fintech, health tech, and AI startups on architectural scalability, fraud defense, and team scaling. You can connect via the contact form or LinkedIn.",
     mentor: "Harsh is a top mentor on ADPList with 100+ guided sessions, helping engineers master system design and transition into Staff+ engineering roles.",
     travel: "Harsh has traveled to 23 US states so far! Highlights include Yellowstone (WY), Yosemite (CA), Mount Rainier (WA), Zion (UT), Grand Canyon (AZ), and Glacier National Park (MT).",
@@ -618,6 +619,7 @@
       const questionMap = {
         skills: "What are Harsh's core technical skills?",
         book: "Tell me about his published fintech book",
+        papers: "What research papers has Harsh published?",
         role: "What is Harsh's role at PayPal?",
         advisory: "How does Harsh approach startup advisory & investing?",
         travel: "What US states has Harsh explored?",
@@ -626,7 +628,7 @@
 
       appendMessage(questionMap[promptKey] || promptKey, true);
       setTimeout(() => {
-        appendMessage(chatbotKnowledge[promptKey] || "Harsh is a Staff Software Engineer at PayPal, author, and investor. Feel free to ask about his skills, experience, book, or schedule a meeting!");
+        appendMessage(chatbotKnowledge[promptKey] || "Harsh is a Staff Software Engineer at PayPal, author, and investor. Feel free to ask about his skills, experience, book, research papers, or schedule a meeting!");
         playSound('hover');
       }, 400);
     };
@@ -640,6 +642,8 @@
       setTimeout(() => {
         if (q.includes('skill') || q.includes('stack') || q.includes('technolog') || q.includes('agent') || q.includes('rag') || q.includes('langchain') || q.includes('vector') || q.includes('llm')) {
           appendMessage(chatbotKnowledge.skills);
+        } else if (q.includes('paper') || q.includes('research') || q.includes('scholar') || q.includes('citation') || q.includes('academic') || q.includes('publication')) {
+          appendMessage(chatbotKnowledge.papers);
         } else if (q.includes('book') || q.includes('author') || q.includes('publish')) {
           appendMessage(chatbotKnowledge.book);
         } else if (q.includes('paypal') || q.includes('work') || q.includes('role') || q.includes('staff')) {
@@ -651,7 +655,7 @@
         } else if (q.includes('meet') || q.includes('call') || q.includes('contact') || q.includes('email')) {
           appendMessage(chatbotKnowledge.contact);
         } else {
-          appendMessage("Harsh is a Staff Software Engineer at PayPal, author of 'The Future of Fintech', mentor, and explorer. Try clicking one of the suggested prompts above or submit a message through the contact form!");
+          appendMessage("Harsh is a Staff Software Engineer at PayPal, author of 'The Future of Fintech', researcher with 56+ citations, mentor, and explorer. Try clicking one of the suggested prompts above or submit a message through the contact form!");
         }
         playSound('hover');
       }, 400);
@@ -707,6 +711,13 @@ Author of "The Future of Fintech", angel investor, top ADPList mentor, and avid 
       book: () => `"The Future of Fintech: AI in Risk Management and Fraud Prevention"
 Author: Harsh Daiya
 Comprehensive guide on leveraging AI, LLMs, and real-time graph reasoning to safeguard financial transactions.`,
+
+      papers: () => `Peer-Reviewed Publications (Google Scholar — 56+ Citations):
+1. "AI-Driven Risk Management Strategies in Financial Technology" (JAIGS, 2024 — 42 citations)
+2. "Enhancing Fraud Detection in Payment Systems Using Explainable AI and Deep Learning Techniques" (IEEE ICCDS, 2024 — 12 citations)
+3. "A Random Forest-Based Method for Detection of Wormhole Attacks in WSNs" (ICICC, 2024 — 2 citations)
+4. "Financial Risk Assessment in FinTech Using Ensemble Learning Methods" (JETIR, 2023)
+Full Scholar Profile: https://scholar.google.com/citations?hl=en&user=ZUFed4EAAAAJ`,
 
       travel: () => `23 States Visited (46% of USA):
 CA, CO, FL, IA, IL, KS, MI, MN, MO, NE, NY, OH, SD, TN, TX, NV, WI, WA, MA, AZ, UT, WY, MT.
@@ -903,6 +914,8 @@ Match Confirmed: Resilient distributed systems & AI fintech leadership incoming!
 
     if (action === 'resume') {
       window.open('https://daiyaharsh90.github.io/pdfResume/Harsh_Daiya_Resume.pdf', '_blank');
+    } else if (action === 'scholar') {
+      window.open('https://scholar.google.com/citations?hl=en&user=ZUFed4EAAAAJ', '_blank');
     } else if (action === 'calendar') {
       const contactSec = document.getElementById('contact');
       if (contactSec) contactSec.scrollIntoView({ behavior: 'smooth' });
