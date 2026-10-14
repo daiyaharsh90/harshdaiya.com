@@ -11,7 +11,7 @@ Website: [harshdaiya.com](https://harshdaiya.com)
 - **Monumental Editorial Typography**: High-impact editorial design inspired by Awwwards Site of the Year nominees, featuring `clamp()` typography, metallic shiny reflections, and integrated interactive iconography.
 - **Real-Time Live Telemetry**: Live status telemetry with Chicago, IL local time, system load, pipeline latency, and commerce protection metrics.
 - **Interactive Risk Engine Simulator**: Interactive real-time pipeline simulator illustrating how high-velocity transaction streams are evaluated, enriched with feature stores, and decided in sub-25ms latency.
-- **Interactive 23 Visited US States Atlas**: Dynamic vector SVG map of the United States highlighting the 23 states visited by Harsh, complete with national park highlights, roadtrip notes, and filtering.
+- **Interactive 25 Visited US States Atlas**: Dynamic vector SVG map of the United States highlighting the 25 states visited by Harsh, complete with national park highlights, roadtrip notes, and filtering.
 - **Embedded Interactive Terminal (`hd-cli`)**: Realistic in-browser terminal console supporting commands like `help`, `bio`, `role`, `skills`, `book`, `travel`, `matrix`, and `sudo hire` 🎉.
 - **Command Palette (`⌘K` / `Ctrl+K`)**: Instant Spotlight-style keyboard search and jump navigation across all sections, links, and theme actions.
 - **Interactive AI Assistant Pill & Drawer**: Embedded conversational assistant answering questions about Harsh's role at PayPal, published book, core skills, and mentorship.

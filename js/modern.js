@@ -13,7 +13,7 @@
     audioCtx: null,
     riskSimActive: true,
     riskAnomaly: false,
-    visitedStatesCount: 23,
+    visitedStatesCount: 25,
   };
 
   // Web Audio Synthesizer
@@ -469,11 +469,12 @@
     };
   }
 
-  // --- 8. INTERACTIVE 23 VISITED US STATES MAP ---
+  // --- 8. INTERACTIVE 25 VISITED US STATES MAP ---
   const stateHighlights = {
     'US-CA': { name: 'California', date: 'Visited', desc: 'Pacific Coast Highway, Yosemite National Park, Silicon Valley tech ecosystem.' },
     'US-CO': { name: 'Colorado', date: 'Visited', desc: 'Rocky Mountain National Park, Continental Divide, Denver & alpine passes.' },
     'US-FL': { name: 'Florida', date: 'Visited', desc: 'Everglades National Park, Miami coastal architecture, Key West overseas route.' },
+    'US-GA': { name: 'Georgia', date: 'Visited', desc: 'Savannah historic district, Atlanta tech hub, Blue Ridge Mountains.' },
     'US-IA': { name: 'Iowa', date: 'Visited', desc: 'Des Moines tech communities, Missouri River bluffs, Heartland heritage.' },
     'US-IL': { name: 'Illinois', date: 'Home Base', desc: 'Home base in Chicago — architecture river tours, Lake Michigan, Millennium Park, tech ecosystem.' },
     'US-KS': { name: 'Kansas', date: 'Visited', desc: 'Tallgrass Prairie National Preserve, historic Santa Fe Trail.' },
@@ -483,6 +484,7 @@
     'US-NE': { name: 'Nebraska', date: 'Visited', desc: 'University of Nebraska MIS foundation, Heartland tech roots.' },
     'US-NY': { name: 'New York', date: 'Visited', desc: 'Manhattan skyline, Wall Street financial district, Central Park & Brooklyn.' },
     'US-OH': { name: 'Ohio', date: 'Visited', desc: 'Cuyahoga Valley National Park, Lake Erie coastlines, aerospace & tech innovation hubs.' },
+    'US-OK': { name: 'Oklahoma', date: 'Visited', desc: 'Historic Route 66, Wichita Mountains Wildlife Refuge, Oklahoma City.' },
     'US-SD': { name: 'South Dakota', date: 'Visited', desc: 'Badlands National Park, Black Hills, Mount Rushmore & Custer State Park.' },
     'US-TN': { name: 'Tennessee', date: 'Visited', desc: 'Great Smoky Mountains National Park, Nashville music scene & Memphis.' },
     'US-TX': { name: 'Texas', date: 'Visited', desc: 'Austin tech & fintech corridors, Dallas-Fort Worth, San Antonio River Walk.' },
@@ -580,7 +582,7 @@
     papers: "Harsh has published 4 peer-reviewed research papers cited 56+ times on Google Scholar, covering AI-driven risk management, explainable AI in payment systems, and ensemble models for financial risk. View his Google Scholar profile: https://scholar.google.com/citations?hl=en&user=ZUFed4EAAAAJ",
     advisory: "Harsh advises early-stage fintech, health tech, and AI startups on architectural scalability, fraud defense, and team scaling. You can connect via the contact form or LinkedIn.",
     mentor: "Harsh is a top mentor on ADPList with 100+ guided sessions, helping engineers master system design and transition into Staff+ engineering roles.",
-    travel: "Harsh has traveled to 23 US states so far! Highlights include Yellowstone (WY), Yosemite (CA), Mount Rainier (WA), Zion (UT), Grand Canyon (AZ), and Glacier National Park (MT).",
+    travel: "Harsh has traveled to 25 US states so far! Highlights include Yellowstone (WY), Yosemite (CA), Mount Rainier (WA), Zion (UT), Grand Canyon (AZ), Glacier National Park (MT), Savannah (GA), and Route 66 (OK).",
     contact: "You can schedule directly through Google Calendar or submit a direct message through the contact form below!"
   };
 
@@ -684,7 +686,7 @@
   • role         : Current position & scope
   • skills       : Core architecture & tech stack
   • book         : Information on published book
-  • travel       : 23 Visited US states
+  • travel       : 25 Visited US states
   • papers       : Academic publications & research
   • contact      : Direct links & booking options
   • theme        : Toggle dark / light theme
@@ -694,7 +696,7 @@
 
       bio: () => `Harsh Daiya — Staff Software Engineer @ PayPal (Risk Platform)
 12+ years pioneering high-velocity risk engines, distributed systems, and real-time fraud mitigation.
-Author of "The Future of Fintech", angel investor, top ADPList mentor, and avid traveler across 23 US states.`,
+Author of "The Future of Fintech", angel investor, top ADPList mentor, and avid traveler across 25 US states.`,
 
       role: () => `Staff Software Engineer, Risk Platform @ PayPal
 • Protects billions in daily commerce volume across global real-time flows.
@@ -719,9 +721,9 @@ Comprehensive guide on leveraging AI, LLMs, and real-time graph reasoning to saf
 4. "Financial Risk Assessment in FinTech Using Ensemble Learning Methods" (JETIR, 2023)
 Full Scholar Profile: https://scholar.google.com/citations?hl=en&user=ZUFed4EAAAAJ`,
 
-      travel: () => `23 States Visited (46% of USA):
-CA, CO, FL, IA, IL, KS, MI, MN, MO, NE, NY, OH, SD, TN, TX, NV, WI, WA, MA, AZ, UT, WY, MT.
-Highlights: Yellowstone, Yosemite, Zion, Grand Canyon, Badlands, Glacier NP, Mount Rainier, Cuyahoga Valley.`,
+      travel: () => `25 States Visited (50% of USA):
+CA, CO, FL, GA, IA, IL, KS, MA, MI, MN, MO, MT, NE, NV, NY, OH, OK, SD, TN, TX, UT, WA, WI, WY, AZ.
+Highlights: Yellowstone, Yosemite, Zion, Grand Canyon, Badlands, Glacier NP, Mount Rainier, Savannah, Route 66.`,
 
       contact: () => `• Google Calendar : Direct 1:1 scheduling
 • Message Form    : submit-form.com integration below
