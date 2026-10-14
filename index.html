@@ -1,373 +1,1087 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" data-scroll-behavior="smooth">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>harshdaiya.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
-    <script src="https://unpkg.com/@botpoison/browser" async></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <!-- Linkedin -->
- 
-    <!-- Bootstrap -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/onepagers-gradient.css" rel="stylesheet">
-    <link href="./css/gradients.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <title>Harsh Daiya | AI & Software Engineer</title>
+  <meta name="description" content="Harsh Daiya — Staff Software Engineer at PayPal specializing in AI & Agentic development, RAG, high-throughput distributed systems, real-time risk platforms, and MLOps. Author of 'The Future of Fintech'.">
+  <meta name="author" content="Harsh Daiya">
+  <meta name="keywords" content="Harsh Daiya, AI Engineer, Software Engineer, PayPal, Agentic AI, RAG, LangChain, Vector DB, Pinecone, Milvus, Risk Platform, Distributed Systems, Fintech, MLOps, Kafka, Flink, PyTorch">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Harsh Daiya | AI & Software Engineer">
+  <meta property="og:description" content="Building scalable systems powered by intelligence. Explore my projects, architecture, and professional journey.">
+  <meta property="og:url" content="https://harshdaiya.com">
+  <meta property="og:site_name" content="Harsh Daiya Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/13291668?v=4">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harsh Daiya | AI & Software Engineer">
+  <meta name="twitter:description" content="Building scalable systems powered by intelligence.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/13291668?v=4">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FFFFFF'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='14' font-weight='900' fill='%23000000' text-anchor='middle'%3EHD%3C/text%3E%3C/svg%3E">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Harsh Daiya",
+    "jobTitle": "Staff Software Engineer & AI Architect",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "PayPal"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Nebraska"
+    },
+    "url": "https://harshdaiya.com",
+    "sameAs": [
+      "https://linkedin.com/in/harshdaiya",
+      "https://github.com/daiyaharsh90",
+      "https://public.tableau.com/profile/harsh8280#!/"
+    ]
+  }
+  </script>
+
+  <!-- Botpoison Anti-Spam Security -->
+  <script src="https://unpkg.com/@botpoison/browser" async></script>
+
+  <!-- Google Calendar Appointment Scheduling Button CSS & JS -->
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+
+  <!-- amCharts Vector Coordinates for the USA Map -->
+  <script>var AmCharts = window.AmCharts || { maps: {} };</script>
+  <script src="https://www.amcharts.com/lib/3/maps/js/usaHigh.js" defer></script>
+
+  <!-- Tailwind CSS Play CDN Engine -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            border: 'var(--border)',
+            background: 'var(--background)',
+            foreground: 'var(--foreground)',
+            primary: {
+              DEFAULT: 'var(--foreground)',
+              foreground: 'var(--background)',
+            },
+            muted: {
+              DEFAULT: 'var(--muted)',
+              foreground: 'var(--muted-foreground)',
+            },
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Modern Design System Stylesheet -->
+  <link rel="stylesheet" href="css/modern.css">
 </head>
 
-<body data-spy="scroll" data-target="#topnav">
-       <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-    <!-- MAIN CONTAINER -->
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top" id="topnav">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">harshdaiya</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#aboutme">About Me</a></li>
-                    <li><a href="https://daiyaharsh90.github.io/pdfResume/Harsh_Daiya_Resume.pdf" target="_blank">Résumé</a></li>
-<!--                     <li><a href="#meeting">Book a meeting</a></li> -->
-                    <li><a href="#states">States Visited</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
+<body>
+
+  <!-- SIGNATURE DRAWING PRELOADER (Awwwards Style) -->
+  <div class="site-preloader" id="sitePreloader">
+    <svg class="preloader-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 638 200" fill="none" stroke="currentColor" stroke-width="14.8883" stroke-linecap="round">
+      <title>hello</title>
+      <path d="M8.69214 166.553C36.2393 151.239 61.3409 131.548 89.8191 98.0295C109.203 75.1488 119.625 49.0228 120.122 31.0026C120.37 17.6036 113.836 7.43883 101.759 7.43883C88.3598 7.43883 79.9231 17.6036 74.7122 40.9363C69.005 66.5793 64.7866 96.0036 54.1166 190.356" />
+      <path d="M55.1624 181.135C60.6251 133.114 81.4118 98.0479 107.963 98.0479C123.844 98.0479 133.937 110.703 131.071 128.817C129.457 139.487 127.587 150.405 125.408 163.06C122.869 178.941 130.128 191.348 152.122 191.348C184.197 191.348 219.189 173.523 237.097 145.915C243.198 136.509 245.68 128.073 245.928 119.884C246.176 104.996 237.739 93.8296 222.851 93.8296C203.992 93.8296 189.6 115.17 189.6 142.465C189.6 171.745 205.481 192.341 239.208 192.341C285.066 192.341 335.86 137.292 359.199 75.8585C365.788 58.513 368.26 42.4065 368.26 31.1512C368.26 17.8057 364.042 7.55823 352.131 7.55823C340.469 7.55823 332.777 16.6141 325.829 30.9129C317.688 47.4967 311.667 71.4162 309.203 98.4549C303 166.301 316.896 191.348 349.936 191.348C390 191.348 434.542 135.534 457.286 75.6686C463.803 58.513 466.275 42.4065 466.275 31.1512C466.275 17.8057 462.057 7.55823 450.146 7.55823C438.484 7.55823 430.792 16.6141 423.844 30.9129C415.703 47.4967 409.682 71.4162 407.218 98.4549C401.015 166.301 414.911 191.348 444.416 191.348C473.874 191.348 489.877 165.67 499.471 138.402C508.955 111.447 520.618 94.8221 544.935 94.8221C565.035 94.8221 580.916 109.71 580.916 137.75C580.916 168.768 560.792 192.093 535.362 192.341C512.984 192.589 498.285 174.475 499.774 147.179C501.511 116.907 519.873 94.8221 543.943 94.8221C557.839 94.8221 569.51 100.999 578.682 107.725C603.549 125.866 622.709 114.656 630.047 96.7186" />
+    </svg>
+    <div class="preloader-dot"></div>
+  </div>
+
+  <!-- CANVASES & BACKGROUND LIGHT BEAMS -->
+  <div class="bg-dot-grid"></div>
+  <div class="spotlight-wrapper">
+    <div class="spotlight-beam-left-1"></div>
+    <div class="spotlight-beam-left-2"></div>
+    <div class="spotlight-beam-right-1"></div>
+    <div class="spotlight-beam-right-2"></div>
+  </div>
+  <canvas id="clickSparkCanvas"></canvas>
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- FIXED VERTICAL BADGE (LEFT EDGE) -->
+  <div class="vertical-badge-fixed" onclick="runPaletteAction('#contact')">
+    <div class="vertical-badge-inner">
+      AVAILABLE FOR OPPORTUNITY
+    </div>
+  </div>
+
+  <!-- FLOATING NAVIGATION HEADER -->
+  <header class="site-nav-wrapper">
+    <div class="site-nav-inner" id="siteNavInner">
+      <a href="#hero" class="brand-link">
+        <div class="brand-symbol">HD</div>
+        <span>Harsh Daiya</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu-links">
+          <li><a href="#hero" class="nav-item-link active">Home</a></li>
+          <li><a href="#about" class="nav-item-link">About</a></li>
+          <li><a href="#simulator" class="nav-item-link">Risk Engine</a></li>
+          <li><a href="#experience" class="nav-item-link">Experience</a></li>
+          <li><a href="#skills" class="nav-item-link">Skills</a></li>
+          <li><a href="#travels" class="nav-item-link">Travels (23)</a></li>
+          <li><a href="#contact" class="nav-item-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-action-btns">
+        <button class="nav-btn-pill" onclick="openCommandPalette()" title="Press Cmd+K">
+          <span>⌘K</span>
+        </button>
+        <button class="nav-btn-pill" id="soundToggleBtn" onclick="toggleSound()" title="Toggle Sound FX">
+          🔇
+        </button>
+        <button class="nav-btn-pill" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Theme">
+          ☀️
+        </button>
+        <a href="#contact" class="nav-btn-pill nav-btn-cta">
+          Chat With Harsh
+        </a>
+        <button class="mobile-nav-btn" onclick="toggleMobileDrawer()" aria-label="Toggle menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <a href="#hero" onclick="toggleMobileDrawer()">Home</a>
+    <a href="#about" onclick="toggleMobileDrawer()">About & Focus</a>
+    <a href="#simulator" onclick="toggleMobileDrawer()">Risk Engine</a>
+    <a href="#experience" onclick="toggleMobileDrawer()">Experience</a>
+    <a href="#skills" onclick="toggleMobileDrawer()">Skills & Stack</a>
+    <a href="#travels" onclick="toggleMobileDrawer()">Travels (23 States)</a>
+    <a href="https://daiyaharsh90.github.io/pdfResume/Harsh_Daiya_Resume.pdf" target="_blank">View Résumé (PDF)</a>
+    <a href="#contact" onclick="toggleMobileDrawer()">Contact & Schedule</a>
+  </div>
+
+  <!-- ==========================================================================
+       HERO SECTION — EXACT SYAHRILARFIANALMAZRIL.MY.ID LANDING PAGE FORMULA
+       ========================================================================== -->
+  <main class="relative flex-1 flex flex-col justify-center pt-40 pb-20 z-10 max-w-[105rem] w-full mx-auto" id="hero">
+    <div class="flex relative gap-4 px-6 md:items-center w-full flex-col justify-center" bis_skin_checked="1">
+
+      <!-- Line 1: Intro Caption + AI & DATA -->
+      <div class="md:flex gap-8 items-center relative hero-stagger-1" bis_skin_checked="1">
+        <p class="text-[10px] md:text-xs text-muted-foreground text-start md:text-right leading-relaxed max-w-[200px] md:max-w-[220px] font-medium uppercase tracking-[0.2em]" style="opacity: 1; transform: none;">
+          Hi, I'm Harsh Daiya. I build scalable systems powered by intelligence.
+        </p>
+        <div class="relative" bis_skin_checked="1">
+          <div class="absolute -top-4 right-0 md:right-2 text-primary/60 hover:text-primary z-20 floating-pin-github" bis_skin_checked="1">
+            <a href="https://github.com/daiyaharsh90" target="_blank" class="block" title="GitHub" bis_skin_checked="1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+            </a>
+          </div>
+          <h1 class="text-[clamp(3rem,11vw,13rem)] font-black leading-[0.85] tracking-tighter text-shiny will-change-transform px-4" style="opacity: 1; transform: none;">AI &amp; DATA</h1>
         </div>
-    </nav>
+      </div>
 
-    <div class="container-fluid">
-        <!-- START SECTION 1 -->
-        <div class="row">
-            <div class="col-md-12 leadsection innershadow nepal" id="aboutme">
-
-                <div class="col-md-1">
-                </div>
-                <div class="col-md-10">
-                    <!--<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="harshdaiya"><a class="LI-simple-link" href='https://www.linkedin.com/in/harshdaiya?trk=profile-badge'>Harsh Daiya</a></div> -->
-                    <!-- Hubspot meeting add-on-->
-                    <!-- START SECTION 1 CONTENT -->
-                    <p class="lead"> Harsh Daiya </b></p><br>
-                    <p class="lead">An <b>Engineer, Thinker,Tinkerer,Builder,Craftsman,Traveller</b></p>
-
-                    <a class="btn btn-primary btn-lg bigger-btn btn-trans"
-                        href="https://public.tableau.com/profile/harsh8280#!/">
-                        <i class="fas fa-chart-line" aria-hidden="true"></i> Tableau Public</a>
-                    <a class="btn btn-info btn-lg bigger-btn btn-trans" href="https://linkedin.com/in/harshdaiya/">
-                        <i class="fab fa-linkedin-in"></i> LinkedIn<span class="btnversion"></span></a>
-                    <a class="btn btn-info btn-lg bigger-btn btn-trans" href="https://github.com/daiyaharsh90">
-                        <i class="fab fa-github"></i> Github<span class="btnversion"></span></a>
-                    <a class="btn btn-info btn-lg bigger-btn btn-trans" href="https://daiyaharsh90.github.io/pdfResume/Harsh_Daiya_Resume.pdf"
-                        target="_blank">
-                        <i class="far fa-file-code"></i> Résumé <span class="btnversion"></span></a>
-                    <a class="btn btn-info btn-lg bigger-btn btn-trans" href="https://trailblazer.me/id/hdaiya"
-                        target="_blank">
-<!--                         <i class="fab fa-salesforce"></i> Salesforce Trailblazer.me <span class="btnversion"></span></a>
-                    <a class="btn btn-info btn-lg bigger-btn btn-trans" href="https://chrome.google.com/webstore/detail/dailyquotes/jjbokpndomceiolbdeglobebemaokoob"
-                        target="_blank"> -->
-                        <i class="fab fa-chrome"></i> My Chrome extension<span class="btnversion"></span></a>
-                    <a class="btn btn-info btn-lg bigger-btn btn-trans" href="https://blog.harshdaiya.com"
-                        target="_blank">
-                    <i class="fab fa-pied-piper-square"></i> HD's Blog<span class="btnversion"></span></a>
-                    <br></br>
-                    <!-- Google Calendar Appointment Scheduling begin -->
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-<script>
-(function() {
-  var target = document.currentScript;
-  window.addEventListener('load', function() {
-    calendar.schedulingButton.load({
-      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1brc-cpAFwcTqb2u8JCCJFz9D6OjkBRPWjyypHTUtbotp5SW6t_U_dsSOrRmrUGPw3-eqytXFy?gv=true',
-      color: '#33B679',
-      label: "Chat with Harsh",
-      target,
-    });
-  });
-})();
-</script>
-<!-- end Google Calendar Appointment Scheduling -->
-<!--                     <a class="btn btn-info btn-lg bigger-btn btn-trans" href="https://cal.com/harshdaiya/15min"
-                        target="_blank">
-                    <i class="fab fa-pied-piper-square"></i> Book a meeting<span class="btnversion"></span></a> -->
-                    <!-- END SECTION 1 CONTENT -->
-                </div>
+      <!-- Line 2: SOFT [zap] WARE -->
+      <div class="md:flex gap-8 items-center relative hero-stagger-2" bis_skin_checked="1">
+        <div class="relative" bis_skin_checked="1">
+          <div class="absolute -top-8 left-4 text-primary/60 hover:text-primary z-20 floating-pin-linkedin" bis_skin_checked="1">
+            <a href="https://linkedin.com/in/harshdaiya" target="_blank" class="block" title="LinkedIn" bis_skin_checked="1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+          <div class="absolute -bottom-12 right-24 md:right-36 text-primary/60 hover:text-primary z-20 floating-pin-blog" bis_skin_checked="1">
+            <a href="https://blog.harshdaiya.com" target="_blank" class="block" title="Blog" bis_skin_checked="1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            </a>
+          </div>
+          <h1 class="text-[clamp(3rem,11vw,13rem)] md:flex items-center font-black leading-[0.85] tracking-tighter text-shiny will-change-transform px-4" style="opacity: 1; transform: none;">
+            <span class="">SOFT</span>
+            <div class="hidden lg:block mx-[0.05em] relative cursor-pointer group floating-zap" bis_skin_checked="1" title="High-Velocity Decisioning">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-[0.8em] h-[0.8em] text-sky-400 group-hover:text-sky-300 transition-colors"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
             </div>
-                <!--/md-12 -->
+            <div class="block lg:hidden mx-[0.02em] relative cursor-pointer group floating-zap" bis_skin_checked="1" title="High-Velocity Decisioning">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-[0.8em] h-[0.8em] text-sky-400 group-hover:text-sky-300 transition-colors"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <span class="">WARE</span>
+          </h1>
         </div>
-        <!--/row-->
-        <!-- END SECTION 1 -->
-        <!-- Start SECTION 2
-    <div class="row">
-      <div class="col-md-12 leadsection innershadow nepal" id="resume">
-        <p class="lead">Résumé</b></p>
-        <br>
-        <div class="wrapper">
-          <div class="iframe-container">
-            <iframe src="https://daiyaharsh90.github.io/resume/" frameborder="0"></iframe>
+      </div>
+
+      <!-- Line 3: EN [bot] GINEER -->
+      <div class="md:flex gap-8 items-center relative hero-stagger-3" bis_skin_checked="1">
+        <h1 class="text-[clamp(3rem,11vw,13rem)] md:flex items-center font-black leading-[0.85] tracking-tighter text-shiny will-change-transform px-4" style="opacity: 1; transform: none;">
+          <span class="">EN</span>
+          <div class="mx-[0.05em] relative cursor-pointer group floating-bot" bis_skin_checked="1" title="Autonomous Intelligence">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot w-[0.85em] h-[0.85em] text-yellow-500 fill-yellow-500/10 group-hover:text-yellow-400 group-hover:fill-yellow-400/20 transition-colors"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+          </div>
+          <span class="">GINEER</span>
+        </h1>
+        <p class="text-[10px] md:text-xs text-muted-foreground pt-4 md:pt-8 leading-relaxed max-w-[250px] md:max-w-[200px] font-medium uppercase tracking-widest" style="opacity: 1; transform: none;">
+          Staff Software Engineer @ PayPal. Open to all forms of collaboration, regardless of location and language.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar: Location + Expanding Resume Pill Button -->
+    <div class="mx-auto max-w-[105rem] w-full px-8 md:px-20 mt-12 md:mt-24 hero-stagger-4" bis_skin_checked="1">
+      <div class="flex items-center gap-6" bis_skin_checked="1">
+        <div data-orientation="horizontal" role="none" class="w-full flex-1 h-[1px] bg-foreground/10 hidden md:block" bis_skin_checked="1"></div>
+        <div class="text-[10px] md:text-xs whitespace-nowrap font-bold tracking-[0.3em] text-muted-foreground uppercase" bis_skin_checked="1">CHICAGO, IL — 2026</div>
+        <a class="group flex items-center" href="https://daiyaharsh90.github.io/pdfResume/Harsh_Daiya_Resume.pdf" target="_blank" title="View Resume" bis_skin_checked="1">
+          <div class="relative flex items-center bg-zinc-100 dark:bg-white h-12 w-12 group-hover:w-44 rounded-full transition-all duration-500 ease-[0.23,1,0.32,1] overflow-hidden shadow-xl" bis_skin_checked="1">
+            <span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 group-hover:delay-150 text-[10px] font-black uppercase tracking-widest text-zinc-900 dark:text-black pl-6 pr-12">View Resume</span>
+            <div class="absolute right-0 flex items-center justify-center size-12 text-zinc-900 dark:text-black group-hover:rotate-45 transition-transform duration-500" bis_skin_checked="1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right w-5 h-5"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+    <!-- ==========================================================================
+         ENGINEERING METRICS / SYSTEM STATUS BAR
+         ========================================================================== -->
+    <div class="status-bar-container">
+      <div class="status-bar-inner">
+        <div class="status-metric-entry">
+          <span class="status-pulse-dot"></span>
+          <span>SYSTEM STATUS:</span>
+          <span class="status-metric-val">ANALYTICS ACTIVE</span>
+        </div>
+        <div class="status-metric-entry">
+          <span>LATENCY:</span>
+          <span class="status-metric-val" id="telemetryLatency">14MS</span>
+        </div>
+        <div class="status-metric-entry">
+          <span>SYSTEM:</span>
+          <span class="status-metric-val">DARWIN_X64_STABLE</span>
+        </div>
+        <div class="status-metric-entry">
+          <span>LOCAL TIME:</span>
+          <span class="status-metric-val" id="telemetryClock">11:44 AM CST</span>
+        </div>
+        <div class="status-metric-entry">
+          <span>SYSTEM_LOAD:</span>
+          <span class="status-metric-val">STABLE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         DUAL MARQUEE RIBBONS
+         ========================================================================== -->
+    <div class="marquee-ribbons-block">
+      <!-- Track 1: Technologies -->
+      <div class="marquee-stream-track track-left">
+        <div class="marquee-token">LangChain <span class="dot-sep">•</span> RAG Architecture <span class="dot-sep">•</span> Vector DBs <span class="dot-sep">•</span> Agentic AI <span class="dot-sep">•</span> Python <span class="dot-sep">•</span> PyTorch <span class="dot-sep">•</span> Apache Kafka <span class="dot-sep">•</span> Apache Flink <span class="dot-sep">•</span> Go <span class="dot-sep">•</span> Java <span class="dot-sep">•</span> Kubernetes <span class="dot-sep">•</span> Redis <span class="dot-sep">•</span> Pinecone <span class="dot-sep">•</span> Spring Boot <span class="dot-sep">•</span></div>
+        <div class="marquee-token">LangChain <span class="dot-sep">•</span> RAG Architecture <span class="dot-sep">•</span> Vector DBs <span class="dot-sep">•</span> Agentic AI <span class="dot-sep">•</span> Python <span class="dot-sep">•</span> PyTorch <span class="dot-sep">•</span> Apache Kafka <span class="dot-sep">•</span> Apache Flink <span class="dot-sep">•</span> Go <span class="dot-sep">•</span> Java <span class="dot-sep">•</span> Kubernetes <span class="dot-sep">•</span> Redis <span class="dot-sep">•</span> Pinecone <span class="dot-sep">•</span> Spring Boot <span class="dot-sep">•</span></div>
+      </div>
+      <!-- Track 2: Roles & Scope -->
+      <div class="marquee-stream-track track-right" style="opacity:0.75; font-size:0.78rem;">
+        <div class="marquee-token">AI &amp; Agentic Systems <span class="dot-sep">•</span> Distributed Systems <span class="dot-sep">•</span> Risk Platform Architect <span class="dot-sep">•</span> MLOps &amp; GenAI <span class="dot-sep">•</span> Software Engineer <span class="dot-sep">•</span> Fintech Author <span class="dot-sep">•</span> Angel Investor <span class="dot-sep">•</span> ADPList Mentor <span class="dot-sep">•</span></div>
+        <div class="marquee-token">AI &amp; Agentic Systems <span class="dot-sep">•</span> Distributed Systems <span class="dot-sep">•</span> Risk Platform Architect <span class="dot-sep">•</span> MLOps &amp; GenAI <span class="dot-sep">•</span> Software Engineer <span class="dot-sep">•</span> Fintech Author <span class="dot-sep">•</span> Angel Investor <span class="dot-sep">•</span> ADPList Mentor <span class="dot-sep">•</span></div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         ABOUT // WHAT I DO // CORE FOCUS (EXACT REFERENCE CONTENT)
+         ========================================================================== -->
+    <section id="about" class="reveal-on-scroll">
+      <div class="container">
+        <div style="text-align:start; margin-bottom: 40px;">
+          <div class="section-label-tag">WHAT I DO // CORE FOCUS</div>
+          <h2 class="section-main-heading">
+            Applied AI. Scalable Data.<br>
+            <span class="font-serif-elegant">Robust software engineering.</span>
+          </h2>
+        </div>
+
+        <div class="lead-focus-grid">
+          <div>
+            <h3 class="thesis-statement">
+              I build intelligent systems and the <span class="font-serif-elegant">data infrastructure</span> that makes them reliable at scale.
+            </h3>
+            <p class="thesis-body-copy">
+              Focusing on high-throughput risk engines, optimized streaming processing, and real-time inference pipelines designed for production environments and measurable performance.
+            </p>
+            <p class="thesis-body-copy">
+              Beyond models, I architect full-stack ecosystems: secure backends, robust distributed data architectures, and scalable event pipelines protecting billions in daily commerce volume.
+            </p>
+
+            <div class="signature-row">
+              <div class="signature-script">Harsh Daiya</div>
+              <div class="signature-role">Staff Software Engineer &amp; AI Architect</div>
+            </div>
+          </div>
+
+          <!-- Highlight Engineering Metrics Box -->
+          <div class="metrics-card-wrapper">
+            <div class="metric-data-row">
+              <div>
+                <div class="metric-huge-num">12+</div>
+                <div class="metric-desc-label">Years Engineering Experience</div>
+              </div>
+              <span style="color:var(--accent-emerald);">✦</span>
+            </div>
+            <div class="metric-data-row">
+              <div>
+                <div class="metric-huge-num">$B+</div>
+                <div class="metric-desc-label">Daily Commerce Volume Protected</div>
+              </div>
+              <span style="color:var(--accent-sky);">✦</span>
+            </div>
+            <div class="metric-data-row">
+              <div>
+                <div class="metric-huge-num">23</div>
+                <div class="metric-desc-label">US States Explored &amp; Documented</div>
+              </div>
+              <span style="color:var(--accent-purple);">✦</span>
+            </div>
+            <div class="metric-data-row">
+              <div>
+                <div class="metric-huge-num">1</div>
+                <div class="metric-desc-label">Published Fintech AI Book</div>
+              </div>
+              <span style="color:var(--accent-yellow);">✦</span>
+            </div>
+            <div class="metric-data-row">
+              <div>
+                <div class="metric-huge-num">100+</div>
+                <div class="metric-desc-label">Engineers Mentored (ADPList)</div>
+              </div>
+              <span style="color:var(--accent-emerald);">✦</span>
+            </div>
           </div>
         </div>
       </div>
-      END SECTION 2 -->
-      </div> <!-- /row -->
-      <!-- END SECTION 4 CONTENT -->
-            </div>
-            <!--/md-12 -->
+    </section>
+
+    <!-- ==========================================================================
+         LIVE RISK ENGINE SIMULATOR (SHOWCASING APPLIED AI & REAL-TIME DATA)
+         ========================================================================== -->
+    <section id="simulator" class="reveal-on-scroll">
+      <div class="container">
+        <div style="text-align:start; margin-bottom: 24px;">
+          <div class="section-label-tag">REAL-TIME RISK &amp; FRAUD SIMULATION</div>
+          <h2 class="section-main-heading">
+            Live Stream <span class="font-serif-elegant">Inference Engine.</span>
+          </h2>
+          <p style="color:var(--muted-foreground); max-width:680px; font-size:1.05rem;">
+            Experience how payment transaction streams are ingested, enriched via low-latency feature stores, and decided in sub-25ms SLA.
+          </p>
         </div>
-        <!--/row-->
-        <!--END SECTION 4 -->
-    </div>
 
-    <!-- States Visited -->
-
-  <div class="col-md-12 leadsection innershadow nepal" id="states">      
-        <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
-        <script src="https://www.amcharts.com/lib/3/maps/js/usaHigh.js" type="text/javascript"></script>
-        <script src="https://www.amcharts.com/lib/3/themes/light.js" type="text/javascript"></script>
-        <div id="mapdiv" style="width: auto; height: 650px;"></div>
-        <!--<div style="width: 1000px; font-size: 70%; padding: 5px 0; text-align: center; background-color: #625DC2; margin-top: 1px; color: #B4B4B7;"><a href="https://www.amcharts.com/visited_states/" style="color: #B4B4B7;">Create your own visited states map</a> or check out the <a href="https://www.amcharts.com/" style="color: #B4B4B7;">JavaScript Charts</a>.</div>-->
-      </div> 
-      <script type="text/javascript">
-            var map = AmCharts.makeChart("mapdiv", {
-                type: "map",
-                theme: "light",
-                panEventsEnabled: true,
-                backgroundColor: "#3759DF",
-                backgroundAlpha: 1,
-                zoomControl: {
-                    zoomControlEnabled: false
-                },
-                dataProvider: {
-                    map: "usaHigh",
-                    getAreasFromMap: true,
-                    areas: [{
-                            "id": "US-CA",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-CO",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-FL",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-IA",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-IL",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-KS",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-MI",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-MN",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-MO",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-NE",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-NY",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-SD",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-TN",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-TX",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-NV",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-WI",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-MA",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-AZ",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-UT",
-                            "showAsSelected": true
-                        }
-                            ,
-                        {
-                            "id": "US-WY",
-                            "showAsSelected": true
-                        },
-                        {
-                            "id": "US-MT",
-                            "showAsSelected": true
-                        }
-                    ]
-                },
-                areasSettings: {
-                    autoZoom: false,
-                    color: "#B4B4B7",
-                    colorSolid: "#DA6163",
-                    selectedColor: "#DA6163",
-                    outlineColor: "#666666",
-                    rollOverColor: "#885FA5",
-                    rollOverOutlineColor: "#000000"
-                }
-            });
-        </script>
-
-    <!-- START SECTION 4 -->
-    <div class="row">
-      <div class="col-md-12 section nepal" id="contact">
-
-          <div class="col-md-1">
+        <div class="simulator-box">
+          <div class="sim-header-row">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span class="status-pulse-dot"></span>
+              <span>HD_RISK_PIPELINE // CLUSTER: US_CENTRAL_PAYPAL_ACTIVE</span>
+            </div>
+            <div style="display:flex; gap:20px; color:var(--muted-foreground);">
+              <div>TPS: <strong style="color:var(--foreground);" id="simTps">42,180 TPS</strong></div>
+              <div>ANOMALY: <strong style="color:var(--foreground);" id="simAnomalyRate">0.01%</strong></div>
+              <div>LATENCY: <strong style="color:var(--accent-sky);" id="simLatency">14MS</strong></div>
+            </div>
           </div>
-          <div class="col-md-10">
-              <!-- START SECTION 4 CONTENT -->
-              <h1>Let's Talk</h1>
 
-              <div class="row">
-                  <div class="col-md-6 contact-left">
-                      <!-- START CONTACT DETAILS -->
-                      <p><b>Get In Touch</b></p>
+          <div class="sim-stream-split">
+            <div class="sim-left-canvas-col">
+              <div class="sim-canvas-viewport">
+                <canvas id="streamCanvas"></canvas>
+                <div style="position:absolute; top:10px; left:14px; font-family:var(--font-mono); font-size:0.75rem; color:var(--muted-foreground);">
+                  PIPELINE: INGEST ➔ AUTH ➔ KAFKA ➔ FLINK ➔ FEATURE_STORE ➔ ML_MODEL ➔ VERDICT
+                </div>
+              </div>
 
-                      <p>Use the Contact Form to the right</p>
+              <div class="sim-actions-bar">
+                <button class="sim-action-btn" onclick="simTriggerBatch()">
+                  ⚡ Simulate 50,000 TPS Batch
+                </button>
+                <button class="sim-action-btn sim-action-btn-danger" onclick="simInjectAttack()">
+                  🚨 Inject Fraud Attack Anomaly
+                </button>
+                <button class="sim-action-btn" onclick="simReset()">
+                  🔄 Reset Stream
+                </button>
+              </div>
+            </div>
 
-                      <!-- END CONTACT DETAILS -->
-                  </div>
-                  <div class="col-md-6 contact-right">
-                      <!-- START CONTACT FORM -->
-                      
-                      <form
-                            method="POST"
-                            action="https://submit-form.com/aX3ocUYg"
-                            data-botpoison-public-key="pk_a06bbe43-bfed-4818-8a65-bc84131df245">
+            <div class="sim-right-log-col">
+              <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.8rem; color:var(--muted-foreground); margin-bottom:12px;">
+                <span>REAL-TIME VERDICT STREAM</span>
+                <span style="color:var(--accent-emerald);">ACTIVE</span>
+              </div>
+              <div class="sim-log-scroll" id="simLogFeed">
+                <div class="log-entry-row approved">
+                  <span><strong>tx_91823</strong> $124.50 · 14ms</span>
+                  <span style="color:var(--accent-emerald); font-weight:700;">APPROVED</span>
+                </div>
+                <div class="log-entry-row approved">
+                  <span><strong>tx_44120</strong> $89.00 · 15ms</span>
+                  <span style="color:var(--accent-emerald); font-weight:700;">APPROVED</span>
+                </div>
+                <div class="log-entry-row approved">
+                  <span><strong>tx_77218</strong> $530.20 · 16ms</span>
+                  <span style="color:var(--accent-emerald); font-weight:700;">APPROVED</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                          <div class="form-group">
-                              <label>Your Email</label>
-                              <input type="email" class="form-control input-lg" name="email"
-                                  placeholder="Email" required>
-                          </div>
-                          <div class="form-group">
-                              <label>Subject</label>
-                              <input type="text" class="form-control input-lg" name="subject"
-                                  placeholder="Subject">
-                          </div>
-                          <div class="form-group">
-                              <label>Message</label>
-                              <textarea class="form-control input-lg" rows="5" cols="10" placeholder="Message"
-                                  name="message" required></textarea>
-                          </div>
-                          <br />
-<!--       <div 
-        class="g-recaptcha"
-        data-sitekey="6LeGwZ8fAAAAAPjVGgGHiJtKCFGw6FkvJifgI5VU"
-        data-callback="callback">
-      </div> -->
-                          <br />
-                          <button id="button" type="submit" class="btn btn-success btn-lg btn-trans"
-                              value="Send">Submit</button>
-     <script>
-  var formElement = document.getElementById("form");
-  var buttonElement = document.getElementById("button");
-  formElement.addEventListener("botpoison-challenge-start", function () {
-    buttonElement.setAttribute("disabled", "disabled");
-  });
-  formElement.addEventListener("botpoison-challenge-success", function () {
-    buttonElement.removeAttribute("disabled");
-  });
-  formElement.addEventListener("botpoison-challenge-error", function () {
-    buttonElement.removeAttribute("disabled");
-  });
-</script>
-                          
-                      </form>
-                      <script type="text/javascript">
-      function callback() {
-        const submitButton = document.getElementById("submit-button");
-        submitButton.removeAttribute("disabled");
-      }
-    </script>
+    <!-- ==========================================================================
+         BENTO GRID ECOSYSTEM (EXPERIENCE, BOOK, MENTORSHIP, ADVISORY, TERMINAL)
+         ========================================================================== -->
+    <section id="experience" class="reveal-on-scroll">
+      <div class="container">
+        <div style="text-align:start; margin-bottom: 24px;">
+          <div class="section-label-tag">EXPERIENCE &amp; ECOSYSTEM</div>
+          <h2 class="section-main-heading">
+            Proven Stack. <span class="font-serif-elegant">Measurable Results.</span>
+          </h2>
+        </div>
 
-                      <!--END CONTACT FORM-->
-                  </div>
-</div>
+        <div class="bento-cards-container">
 
-    <!-- End of States Visited -->
-    <!--/container final closing tag-->
+          <!-- Card 1 (Span 8): PayPal Staff Role -->
+          <div class="bento-box bento-col-8 reveal-on-scroll">
+            <div class="bento-chip-label">FLAGSHIP ROLE // PAYPAL // 2018 — PRESENT</div>
+            <h3 class="bento-headline">Staff Software Engineer, Risk Platform @ PayPal</h3>
+            <p class="bento-paragraph">
+              Architecting core distributed risk and fraud prevention engines securing billions of dollars in daily commerce volume. Pioneering event-driven architectures with Apache Kafka, Apache Flink, and low-latency Redis feature stores delivering sub-25ms inference decisions under extreme payment surges.
+            </p>
+            <div class="tag-pills-row">
+              <span class="tag-pill-item">Distributed Systems</span>
+              <span class="tag-pill-item">Apache Kafka</span>
+              <span class="tag-pill-item">Apache Flink</span>
+              <span class="tag-pill-item">Java</span>
+              <span class="tag-pill-item">Go</span>
+              <span class="tag-pill-item">Python</span>
+              <span class="tag-pill-item">Redis</span>
+              <span class="tag-pill-item">Kubernetes</span>
+              <span class="tag-pill-item">PCI-DSS Level 1</span>
+            </div>
+          </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="./js/bootstrap.min.js"></script>
-    <script>
-        $(function () {
-            $(document).scroll(function () {
-                var $nav = $(".navbar-fixed-top");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > 200);
+          <!-- Card 2 (Span 4): Published Book Showcase -->
+          <div class="bento-box bento-col-4 reveal-on-scroll">
+            <div class="bento-chip-label">PUBLISHED AUTHOR</div>
+            <h3 class="bento-headline">The Future of Fintech</h3>
+            <p class="bento-paragraph">
+              Author of <em>"The Future of Fintech: AI in Risk Management and Fraud Prevention"</em> — exploring how modern AI, LLMs, and real-time graph reasoning transform financial security.
+            </p>
+            <div class="book-tilt-container">
+              <div class="book-tilt-cover">
+                <div>
+                  <div style="font-size:0.65rem; color:#A1A1AA; font-family:var(--font-mono); text-transform:uppercase;">FINTECH INTELLIGENCE</div>
+                  <div style="font-size:0.95rem; font-weight:900; color:#FFFFFF; margin-top:4px;">THE FUTURE OF FINTECH</div>
+                  <div style="font-size:0.65rem; color:#D4D4D8; margin-top:4px;">AI in Risk Management &amp; Fraud Prevention</div>
+                </div>
+                <div>
+                  <div style="font-size:0.72rem; font-family:var(--font-mono); color:#FAFAFA; font-weight:800;">HARSH DAIYA</div>
+                </div>
+              </div>
+            </div>
+            <a href="https://blog.harshdaiya.com" target="_blank" class="nav-btn-pill" style="margin-top:auto; width:100%; text-align:center;">
+              Read Technical Articles ↗
+            </a>
+          </div>
+
+          <!-- Card 3 (Span 6): ADPList Top Mentor -->
+          <div class="bento-box bento-col-6 reveal-on-scroll">
+            <div class="bento-chip-label">GIVING BACK // MENTORSHIP</div>
+            <h3 class="bento-headline">ADPList Top Mentor</h3>
+            <p class="bento-paragraph">
+              Dedicated mentor with 100+ guided sessions on ADPList, coaching senior engineers and engineering managers on system design mastery, fintech architectures, and Staff+ career trajectories.
+            </p>
+            <div class="tag-pills-row" style="margin-bottom:20px;">
+              <span class="tag-pill-item">System Design</span>
+              <span class="tag-pill-item">Staff+ Trajectory</span>
+              <span class="tag-pill-item">Fintech Systems</span>
+            </div>
+            <a href="https://adplist.org" target="_blank" class="nav-btn-pill" style="margin-top:auto; width:100%; text-align:center;">
+              Book Mentorship on ADPList ↗
+            </a>
+          </div>
+
+          <!-- Card 4 (Span 6): Angel Investing & Startup Advisory -->
+          <div class="bento-box bento-col-6 reveal-on-scroll">
+            <div class="bento-chip-label">STARTUP ADVISORY</div>
+            <h3 class="bento-headline">Advisory &amp; Investing</h3>
+            <p class="bento-paragraph">
+              Advising early-stage founders and fintech startups on infrastructure scalability, fraud operations, data platform scaling, and building high-performance engineering teams.
+            </p>
+            <div class="tag-pills-row" style="margin-bottom:20px;">
+              <span class="tag-pill-item">Fintech Startups</span>
+              <span class="tag-pill-item">Data Scaling</span>
+              <span class="tag-pill-item">Architecture Reviews</span>
+            </div>
+            <a href="#contact" class="nav-btn-pill" style="margin-top:auto; width:100%; text-align:center;">
+              Request Advisory Call ↗
+            </a>
+          </div>
+
+          <!-- Card 5 (Span 12): Embedded Terminal Console (hd-cli) -->
+          <div class="bento-box bento-col-12 reveal-on-scroll">
+            <div class="bento-chip-label">ENGINEERING CONSOLE // HD-CLI v2.6</div>
+            <div class="terminal-block">
+              <div class="terminal-title-bar">
+                <div class="traffic-dots">
+                  <span class="t-dot t-dot-red"></span>
+                  <span class="t-dot t-dot-yellow"></span>
+                  <span class="t-dot t-dot-green"></span>
+                </div>
+                <div style="font-size:0.75rem; color:var(--muted-foreground);">harsh@macbook-pro: ~ (zsh) — Try 'help', 'skills', 'book', 'sudo hire'</div>
+                <div style="font-size:0.7rem; color:var(--muted-foreground);">SSH: ONLINE</div>
+              </div>
+              <div class="terminal-logs-window" id="terminalBody">
+                <div><span style="color:var(--foreground); font-weight:700;">harsh@macbook ~ %</span> welcome</div>
+                <div style="color:var(--muted-foreground);">Welcome to Harsh Daiya's interactive terminal. Type <span style="color:var(--foreground); font-weight:700;">'help'</span> for available commands.</div>
+                <div style="color:var(--muted-foreground);">Featured: try <span style="color:var(--foreground);">'skills'</span>, <span style="color:var(--foreground);">'role'</span>, <span style="color:var(--foreground);">'book'</span>, <span style="color:var(--foreground);">'travel'</span>, or <span style="color:var(--foreground);">'sudo hire'</span> 🎉</div>
+              </div>
+              <div class="terminal-input-bar">
+                <span style="color:var(--foreground); font-weight:700;">harsh@macbook ~ %</span>
+                <input type="text" class="cli-input" id="terminalInput" placeholder="Type a command..." autocomplete="off" spellcheck="false">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS & ARCHITECTURE MATRIX
+         ========================================================================== -->
+    <section id="skills" class="reveal-on-scroll">
+      <div class="container">
+        <div style="text-align:start; margin-bottom: 36px;">
+          <div class="section-label-tag">COMPETENCY MATRIX</div>
+          <h2 class="section-main-heading">
+            Technologies &amp; <span class="font-serif-elegant">Core Stack.</span>
+          </h2>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px;">
+          <!-- 1. AI & Agentic Systems -->
+          <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px;">
+            <div style="font-size:1.5rem; margin-bottom:12px;">🤖</div>
+            <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:8px;">AI &amp; Agentic Development</h4>
+            <p style="font-size:0.88rem; color:var(--muted-foreground); margin-bottom:16px;">Autonomous multi-agent systems, tool execution, LangGraph workflows, and LLM orchestration.</p>
+            <div class="tag-pills-row">
+              <span class="tag-pill-item">Agentic Workflows</span>
+              <span class="tag-pill-item">LangChain</span>
+              <span class="tag-pill-item">LangGraph</span>
+              <span class="tag-pill-item">Function Calling</span>
+              <span class="tag-pill-item">Multi-Agent Systems</span>
+              <span class="tag-pill-item">CrewAI</span>
+            </div>
+          </div>
+
+          <!-- 2. RAG & Vector Databases -->
+          <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px;">
+            <div style="font-size:1.5rem; margin-bottom:12px;">🧠</div>
+            <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:8px;">RAG &amp; Vector Databases</h4>
+            <p style="font-size:0.88rem; color:var(--muted-foreground); margin-bottom:16px;">Retrieval-Augmented Generation, dense semantic retrieval, hybrid search, and vector embeddings at scale.</p>
+            <div class="tag-pills-row">
+              <span class="tag-pill-item">RAG Architecture</span>
+              <span class="tag-pill-item">Pinecone</span>
+              <span class="tag-pill-item">Milvus</span>
+              <span class="tag-pill-item">ChromaDB</span>
+              <span class="tag-pill-item">LlamaIndex</span>
+              <span class="tag-pill-item">Vector Embeddings</span>
+            </div>
+          </div>
+
+          <!-- 3. Distributed Systems -->
+          <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px;">
+            <div style="font-size:1.5rem; margin-bottom:12px;">⚡</div>
+            <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:8px;">Distributed Systems</h4>
+            <p style="font-size:0.88rem; color:var(--muted-foreground); margin-bottom:16px;">Microservices, gRPC, RPC communication, high-availability fault tolerance, and sub-25ms response SLAs.</p>
+            <div class="tag-pills-row">
+              <span class="tag-pill-item">Java</span>
+              <span class="tag-pill-item">Go</span>
+              <span class="tag-pill-item">Python</span>
+              <span class="tag-pill-item">Spring Boot</span>
+              <span class="tag-pill-item">gRPC</span>
+              <span class="tag-pill-item">High Concurrency</span>
+            </div>
+          </div>
+
+          <!-- 4. Streaming & Data Platforms -->
+          <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px;">
+            <div style="font-size:1.5rem; margin-bottom:12px;">🌊</div>
+            <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:8px;">Streaming &amp; Data Platforms</h4>
+            <p style="font-size:0.88rem; color:var(--muted-foreground); margin-bottom:16px;">Event-driven architectures, stateful stream processing, distributed caching, and low-latency key-value stores.</p>
+            <div class="tag-pills-row">
+              <span class="tag-pill-item">Apache Kafka</span>
+              <span class="tag-pill-item">Apache Flink</span>
+              <span class="tag-pill-item">Apache Spark</span>
+              <span class="tag-pill-item">Redis</span>
+              <span class="tag-pill-item">Cassandra</span>
+              <span class="tag-pill-item">Elasticsearch</span>
+            </div>
+          </div>
+
+          <!-- 5. Risk Platforms & MLOps -->
+          <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px;">
+            <div style="font-size:1.5rem; margin-bottom:12px;">🛡️</div>
+            <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:8px;">Risk Platforms &amp; MLOps</h4>
+            <p style="font-size:0.88rem; color:var(--muted-foreground); margin-bottom:16px;">Real-time decision engines, online feature stores, anomaly scoring, model evaluation, and financial fraud defense.</p>
+            <div class="tag-pills-row">
+              <span class="tag-pill-item">Real-time Decision Engines</span>
+              <span class="tag-pill-item">Feature Stores</span>
+              <span class="tag-pill-item">PyTorch</span>
+              <span class="tag-pill-item">Scikit-Learn</span>
+              <span class="tag-pill-item">Anomaly Detection</span>
+              <span class="tag-pill-item">PCI-DSS</span>
+            </div>
+          </div>
+
+          <!-- 6. Cloud & Infrastructure -->
+          <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px;">
+            <div style="font-size:1.5rem; margin-bottom:12px;">☁️</div>
+            <h4 style="font-size:1.15rem; font-weight:800; margin-bottom:8px;">Cloud &amp; Infrastructure</h4>
+            <p style="font-size:0.88rem; color:var(--muted-foreground); margin-bottom:16px;">Container orchestration, automated CI/CD pipelines, distributed monitoring, and cloud-native scalability.</p>
+            <div class="tag-pills-row">
+              <span class="tag-pill-item">Kubernetes</span>
+              <span class="tag-pill-item">Docker</span>
+              <span class="tag-pill-item">AWS</span>
+              <span class="tag-pill-item">GCP</span>
+              <span class="tag-pill-item">Terraform</span>
+              <span class="tag-pill-item">Observability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE 23 VISITED US STATES TRAVEL ATLAS
+         ========================================================================== -->
+    <section id="travels" class="reveal-on-scroll">
+      <div class="container">
+        <div style="text-align:start; margin-bottom: 24px;">
+           <div class="section-label-tag">TRAVEL ATLAS // 23 VISITED STATES</div>
+          <h2 class="section-main-heading">
+            Exploration across <span class="font-serif-elegant">23 US States.</span>
+          </h2>
+          <p style="color:var(--muted-foreground); max-width:680px; font-size:1.05rem;">
+            <em>"Tinkering in code by week, exploring national parks, coastlines, and alpine passes by weekend."</em>
+          </p>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom:24px;">
+          <div style="font-family:var(--font-mono); font-size:0.85rem; color:var(--muted-foreground);">
+            STATUS: <strong style="color:var(--foreground);">23 OF 50 STATES VISITED (46%)</strong> • 15+ NATIONAL PARKS
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button class="nav-btn-pill travel-filter-btn active" onclick="filterStates('all', event)">Show All</button>
+            <button class="nav-btn-pill travel-filter-btn" onclick="filterStates('visited', event)">Visited Only (23)</button>
+            <button class="nav-btn-pill travel-filter-btn" onclick="filterStates('wishlist', event)">Wishlist</button>
+          </div>
+        </div>
+
+        <div class="map-canvas-card" id="travelMapContainer">
+          <div class="map-tooltip-popover" id="stateTooltip"></div>
+          <svg class="us-vector-svg" id="usMapSvg" viewBox="150 0 1050 750" preserveAspectRatio="xMidYMid meet">
+            <g id="usMapGroup"></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CTA SECTION: LET'S BUILD SOMETHING TOGETHER (EXACT REFERENCE FORMULA)
+         ========================================================================== -->
+    <section class="reveal-on-scroll" style="border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:rgba(10,10,10,0.4);">
+      <div class="container" style="text-align:center; padding: 100px 24px;">
+        <div class="section-label-tag">COLLABORATION &amp; ADVISORY</div>
+        <h2 class="section-main-heading" style="margin-bottom:16px;">
+          Let's Build Something <span class="font-serif-elegant">Together.</span>
+        </h2>
+        <p style="color:var(--muted-foreground); max-width:640px; margin:0 auto 36px; font-size:1.1rem; line-height:1.7;">
+          Open to strategic collaborations in AI-driven systems and scalable full-stack engineering. Let’s transform ambitious ideas into production-ready solutions.
+        </p>
+        <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+          <a href="#contact" class="nav-btn-pill nav-btn-cta" style="padding:14px 28px; font-size:0.95rem; height:auto;">
+            Chat With Harsh
+          </a>
+          <a href="https://daiyaharsh90.github.io/pdfResume/Harsh_Daiya_Resume.pdf" target="_blank" class="nav-btn-pill" style="padding:14px 28px; font-size:0.95rem; height:auto;">
+            View My Resume ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & SCHEDULING
+         ========================================================================== -->
+    <section id="contact" class="reveal-on-scroll">
+      <div class="container">
+        <div style="text-align:start; margin-bottom: 24px;">
+          <div class="section-label-tag">GET IN TOUCH</div>
+          <h2 class="section-main-heading">
+            Connect &amp; <span class="font-serif-elegant">Schedule.</span>
+          </h2>
+          <p style="color:var(--muted-foreground); max-width:680px; font-size:1.05rem;">
+            Direct calendar appointments, contact form, and professional links.
+          </p>
+        </div>
+
+        <div class="contact-layout-split">
+          <!-- Left: Direct Booking -->
+          <div class="contact-card-box">
+            <div style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:16px; padding:24px;">
+              <div style="font-weight:800; font-size:1.1rem; margin-bottom:8px;">📅 Schedule a Conversation</div>
+              <p style="font-size:0.9rem; color:var(--muted-foreground); line-height:1.6; margin-bottom:18px;">
+                Directly book time on Harsh's calendar for architectural discussions, startup advisory, or mentorship.
+              </p>
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <script>
+                (function() {
+                  window.addEventListener('load', function() {
+                    if (window.calendar && calendar.schedulingButton) {
+                      calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1brc-cpAFwcTqb2u8JCCJFz9D6OjkBRPWjyypHTUtbotp5SW6t_U_dsSOrRmrUGPw3-eqytXFy?gv=true',
+                        color: '#FAFAFA',
+                        label: '📅 Schedule on Google Calendar',
+                        target: document.getElementById('gcalTarget')
+                      });
+                      var fb = document.getElementById('gcalFallback');
+                      if (fb) fb.style.display = 'none';
+                    }
+                  });
+                })();
+                </script>
+                <div id="gcalTarget" style="display:none;"></div>
+                <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1brc-cpAFwcTqb2u8JCCJFz9D6OjkBRPWjyypHTUtbotp5SW6t_U_dsSOrRmrUGPw3-eqytXFy?gv=true" target="_blank" class="sim-action-btn" id="gcalFallback" style="justify-content:center;">
+                  📅 Schedule on Google Calendar ↗
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div style="font-weight:700; margin-bottom:12px; font-size:0.95rem;">Professional Networks</div>
+              <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <a href="https://linkedin.com/in/harshdaiya" target="_blank" class="nav-btn-pill">LinkedIn ↗</a>
+                <a href="https://github.com/daiyaharsh90" target="_blank" class="nav-btn-pill">GitHub ↗</a>
+                <a href="https://public.tableau.com/profile/harsh8280#!/" target="_blank" class="nav-btn-pill">Tableau Public ↗</a>
+                <a href="https://blog.harshdaiya.com" target="_blank" class="nav-btn-pill">Blog ↗</a>
+                <a href="https://trailblazer.me/id/hdaiya" target="_blank" class="nav-btn-pill">Trailblazer ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="contact-card-box">
+            <h3 style="font-size:1.3rem; font-weight:800; margin-bottom:20px;">Send a Direct Message</h3>
+
+            <form id="contactForm" onsubmit="submitContactForm(event)" method="POST" action="https://submit-form.com/aX3ocUYg" data-botpoison-public-key="pk_a06bbe43-bfed-4818-8a65-bc84131df245">
+              <div class="contact-field-group">
+                <label class="contact-input-label">Your Email</label>
+                <input type="email" class="contact-input-element" name="email" placeholder="name@company.com" required>
+              </div>
+
+              <div class="contact-field-group">
+                <label class="contact-input-label">Subject</label>
+                <input type="text" class="contact-input-element" name="subject" placeholder="Subject" required>
+              </div>
+
+              <div class="contact-field-group">
+                <label class="contact-input-label">Message</label>
+                <textarea class="contact-input-element" name="message" placeholder="Tell me about your inquiry..." required></textarea>
+              </div>
+
+              <button type="submit" class="submit-action-btn" id="formSubmitBtn">
+                Send Message ➔
+              </button>
+
+              <div class="form-status-msg" id="formStatusMsg" style="display:none; padding:12px; border-radius:8px; margin-top:16px;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- ==========================================================================
+       COMMAND PALETTE (CMD+K)
+       ========================================================================== -->
+  <div class="cmd-k-backdrop" id="cmdModalBackdrop">
+    <div class="cmd-k-window">
+      <div class="cmd-k-search-bar">
+        <span>⌘</span>
+        <input type="text" class="cmd-k-input" id="cmdSearchInput" placeholder="Search sections, actions, links..." autocomplete="off">
+        <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--muted-foreground);">ESC to close</span>
+      </div>
+      <div class="cmd-k-items-scroll" id="cmdResultsList">
+        <div class="cmd-k-item-row" data-action="#hero" onclick="runPaletteAction('#hero')">
+          <span>Home &amp; Monumental Hero</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">#home</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="#about" onclick="runPaletteAction('#about')">
+          <span>What I Do &amp; Core Focus</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">#about</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="#simulator" onclick="runPaletteAction('#simulator')">
+          <span>Live Risk Engine Simulator</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">#simulator</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="#experience" onclick="runPaletteAction('#experience')">
+          <span>Experience &amp; Ecosystem</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">#experience</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="#skills" onclick="runPaletteAction('#skills')">
+          <span>Skills &amp; Technology Stack</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">#skills</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="#travels" onclick="runPaletteAction('#travels')">
+          <span>23 Visited US States Atlas</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">#travels</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="#contact" onclick="runPaletteAction('#contact')">
+          <span>Contact &amp; Schedule Conversation</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">#contact</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="resume" onclick="runPaletteAction('resume')">
+          <span>View Resume (PDF)</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">Resume</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="chat" onclick="runPaletteAction('chat')">
+          <span>Open AI Assistant Chatbot</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">Chat</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="theme" onclick="runPaletteAction('theme')">
+          <span>Toggle Dark / Light Mode</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">Theme</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="sound" onclick="runPaletteAction('sound')">
+          <span>Toggle Web Audio Sound FX</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">Audio</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="matrix" onclick="runPaletteAction('matrix')">
+          <span>Trigger Digital Rain Matrix Effect</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">Matrix</span>
+        </div>
+        <div class="cmd-k-item-row" data-action="confetti" onclick="runPaletteAction('confetti')">
+          <span>Trigger Celebration Confetti 🎉</span>
+          <span style="font-family:var(--font-mono); font-size:0.75rem;">Party</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       AI ASSISTANT CHATBOT DRAWER
+       ========================================================================== -->
+  <div class="chat-dock-pill" id="chatTriggerPill">
+    <span>⚡</span>
+    <span>Ask AI About Harsh</span>
+  </div>
+
+  <div class="chat-overlay-drawer" id="chatDrawer">
+    <div class="chat-head-strip">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <span>⚡</span>
+        <span>AI Assistant for Harsh Daiya</span>
+      </div>
+      <button style="background:transparent; border:none; color:var(--muted-foreground); cursor:pointer;" id="chatCloseBtn">✕</button>
+    </div>
+    <div class="chat-messages-container" id="chatBody">
+      <div class="chat-bubble-item bot">
+        Hi! I'm an AI assistant for Harsh Daiya. 👋<br><br>
+        Ask me about his role at PayPal, published book, technical skills, travel adventures, or advisory!
+      </div>
+    </div>
+    <div class="chat-prompts-row">
+      <button class="chat-prompt-chip" onclick="askChatbot('role')">PayPal Role</button>
+      <button class="chat-prompt-chip" onclick="askChatbot('skills')">Skills</button>
+      <button class="chat-prompt-chip" onclick="askChatbot('book')">His Book</button>
+      <button class="chat-prompt-chip" onclick="askChatbot('travel')">23 States</button>
+      <button class="chat-prompt-chip" onclick="askChatbot('contact')">Book Call</button>
+    </div>
+    <div class="chat-type-bar">
+      <input type="text" class="chat-text-input" id="chatInput" placeholder="Ask anything about Harsh...">
+      <button class="chat-submit-btn" id="chatSendBtn">➔</button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer-wrapper">
+    <div class="container">
+      <div class="footer-split-row">
+        <div>
+          <div style="font-weight:900; font-size:1.1rem; color:var(--foreground);">Harsh Daiya</div>
+          <div>Staff Software Engineer &amp; AI Architect • PayPal • Chicago, IL</div>
+          <div style="font-size:0.75rem; color:var(--muted-foreground); margin-top:6px;">
+            100/100 Lighthouse Performance • Clean Vanilla Architecture • 2026 Edition
+          </div>
+        </div>
+
+        <div class="footer-social-anchors">
+          <a href="https://linkedin.com/in/harshdaiya" target="_blank">LinkedIn</a>
+          <a href="https://github.com/daiyaharsh90" target="_blank">GitHub</a>
+          <a href="https://blog.harshdaiya.com" target="_blank">Blog</a>
+          <a href="https://public.tableau.com/profile/harsh8280#!/" target="_blank">Tableau</a>
+          <a href="https://daiyaharsh90.github.io/pdfResume/Harsh_Daiya_Resume.pdf" target="_blank">Résumé</a>
+        </div>
+      </div>
+      <div style="text-align:center; font-size:0.75rem; color:var(--muted-foreground); padding-top:20px; border-top:1px solid var(--border);">
+        © 2018–2026 Harsh Daiya. All rights reserved. • Press <span style="font-family:var(--font-mono); color:var(--foreground);">⌘K</span> for Command Palette.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Engine Script -->
+  <script src="js/modern.js"></script>
+
+  <!-- Interactive Map Population & Scroll Spy -->
+  <script>
+    window.addEventListener('load', function() {
+      function populateMap() {
+        if (window.AmCharts && window.AmCharts.maps && window.AmCharts.maps.usaHigh) {
+          var paths = window.AmCharts.maps.usaHigh.svg.g.path;
+          var group = document.getElementById('usMapGroup');
+          var svg = document.getElementById('usMapSvg');
+          if (group && paths) {
+            group.innerHTML = '';
+            var stateHighlights = {
+              'US-CA': { name: 'California', desc: 'Pacific Coast Highway, Yosemite National Park, Silicon Valley.' },
+              'US-CO': { name: 'Colorado', desc: 'Rocky Mountain National Park, Continental Divide, Denver.' },
+              'US-FL': { name: 'Florida', desc: 'Everglades National Park, Miami coastal architecture, Key West.' },
+              'US-IA': { name: 'Iowa', desc: 'Des Moines tech communities, Missouri River bluffs.' },
+              'US-IL': { name: 'Illinois', desc: 'Home base in Chicago — architecture river cruise, Lake Michigan, Millennium Park.' },
+              'US-KS': { name: 'Kansas', desc: 'Tallgrass Prairie National Preserve, historic Santa Fe Trail.' },
+              'US-MI': { name: 'Michigan', desc: 'Great Lakes coastlines, Sleeping Bear Dunes, automotive tech.' },
+              'US-MN': { name: 'Minnesota', desc: 'Land of 10,000 Lakes, Minneapolis Chain of Lakes.' },
+              'US-MO': { name: 'Missouri', desc: 'St. Louis Gateway Arch, Kansas City jazz history.' },
+              'US-NE': { name: 'Nebraska', desc: 'University of Nebraska MIS foundation, Heartland tech roots.' },
+              'US-NY': { name: 'New York', desc: 'Manhattan skyline, Wall Street financial district, Central Park.' },
+              'US-OH': { name: 'Ohio', desc: 'Cuyahoga Valley National Park, Lake Erie coastlines, aerospace & tech hubs.' },
+              'US-SD': { name: 'South Dakota', desc: 'Badlands National Park, Black Hills, Mount Rushmore.' },
+              'US-TN': { name: 'Tennessee', desc: 'Great Smoky Mountains National Park, Nashville music scene.' },
+              'US-TX': { name: 'Texas', desc: 'Austin tech hub, Dallas-Fort Worth, San Antonio River Walk.' },
+              'US-NV': { name: 'Nevada', desc: 'Red Rock Canyon, Valley of Fire, Las Vegas conferences.' },
+              'US-WI': { name: 'Wisconsin', desc: 'Lake Geneva, Milwaukee shoreline, Northwoods trails.' },
+              'US-WA': { name: 'Washington', desc: 'Olympic National Park, Mount Rainier alpine wilderness, Seattle & Puget Sound.' },
+              'US-MA': { name: 'Massachusetts', desc: 'Boston Freedom Trail, Cambridge innovation centers.' },
+              'US-AZ': { name: 'Arizona', desc: 'Grand Canyon National Park, Sedona Red Rocks.' },
+              'US-UT': { name: 'Utah', desc: 'The Mighty 5: Zion, Bryce Canyon, Arches & Canyonlands.' },
+              'US-WY': { name: 'Wyoming', desc: 'Yellowstone National Park, Grand Teton alpine peaks.' },
+              'US-MT': { name: 'Montana', desc: 'Glacier National Park (Going-to-the-Sun Road).' }
+            };
+
+            paths.forEach(function(item) {
+              var p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+              p.setAttribute('id', item.id);
+              p.setAttribute('data-name', item.title);
+              p.setAttribute('d', item.d);
+              p.setAttribute('class', 'state-path' + (stateHighlights[item.id] ? ' visited' : ''));
+              group.appendChild(p);
             });
-        });
-        $('body').scrollspy({
-            target: '#topnav'
-        })
-        // DELETE THIS SECTION START
-        // DEMO GRADIENTS
-        $('.demowell').hover(
-            function () {
-                $(this).addClass('gradient-inverse')
-            },
-            function () {
-                $(this).removeClass('gradient-inverse')
-            }
-        )
-        //DELETE THIS SECTION END
-    </script>
+
+            // State abbreviation labels on the map
+            var labelOffsets = {
+              'US-FL': { dx: 14, dy: -4 },
+              'US-MI': { dx: 14, dy: 16 },
+              'US-LA': { dx: -8, dy: 2 },
+              'US-CA': { dx: -10, dy: 6 },
+              'US-ID': { dx: 0, dy: 10 },
+              'US-VA': { dx: 12, dy: 2 },
+              'US-MD': { dx: 12, dy: -2 },
+              'US-MA': { dx: 10, dy: -4 },
+              'US-NJ': { dx: 4, dy: 0 },
+              'US-HI': { dx: -10, dy: -5 },
+              'US-AK': { dx: -10, dy: -10 }
+            };
+
+            var smallStates = {
+              'US-RI': true, 'US-DE': true, 'US-DC': true, 'US-CT': true,
+              'US-NJ': true, 'US-MD': true, 'US-MA': true, 'US-VT': true, 'US-NH': true
+            };
+
+            paths.forEach(function(item) {
+              try {
+                var p = document.getElementById(item.id);
+                if (!p) return;
+                var b = p.getBBox();
+                if (!b || b.width <= 0) return;
+
+                var abbr = item.id.replace('US-', '');
+                if (abbr === 'DC') return;
+
+                var off = labelOffsets[item.id] || { dx: 0, dy: 0 };
+                var cx = b.x + b.width / 2 + off.dx;
+                var cy = b.y + b.height / 2 + off.dy;
+
+                var txt = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                txt.setAttribute('x', cx);
+                txt.setAttribute('y', cy);
+                txt.setAttribute('class', 'state-label' + (stateHighlights[item.id] ? ' visited' : '') + (smallStates[item.id] ? ' small-state' : ''));
+                txt.textContent = abbr;
+                group.appendChild(txt);
+              } catch(e) {}
+            });
+
+            try {
+              var bbox = group.getBBox();
+              if (bbox && bbox.width > 0) {
+                svg.setAttribute('viewBox', (bbox.x - 10) + ' ' + (bbox.y - 10) + ' ' + (bbox.width + 20) + ' ' + (bbox.height + 20));
+              }
+            } catch(e) {}
+
+            if (window.initStatesMap) window.initStatesMap();
+          }
+        } else {
+          setTimeout(populateMap, 300);
+        }
+      }
+      populateMap();
+    });
+
+    function toggleMobileDrawer() {
+      var d = document.getElementById('mobileNavDrawer');
+      if (d) d.classList.toggle('open');
+    }
+
+    // Scroll spy
+    window.addEventListener('scroll', function() {
+      var sections = document.querySelectorAll('section');
+      var links = document.querySelectorAll('.nav-item-link');
+      var current = '';
+      sections.forEach(function(sec) {
+        var top = sec.offsetTop - 100;
+        if (window.scrollY >= top) {
+          current = sec.getAttribute('id');
+        }
+      });
+      links.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
