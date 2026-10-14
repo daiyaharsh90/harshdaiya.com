@@ -17,6 +17,8 @@ Website: [harshdaiya.com](https://harshdaiya.com)
 - **Interactive AI Assistant Pill & Drawer**: Embedded conversational assistant answering questions about Harsh's role at PayPal, published book, core skills, and mentorship.
 - **ThemeAware Click Sparks**: Interactive particle burst canvas on click.
 - **Integrated Scheduling & Contact**: Direct Google Calendar appointment scheduler (`Chat with Harsh`), and direct contact form with Botpoison anti-spam defense.
+- **Peer-Reviewed Research Showcase**: Dedicated publications section featuring 4 papers cited 56+ times across international journals and IEEE conferences, linked directly to Harsh's verified Google Scholar profile.
+- **AI & Agentic Competency Matrix**: In-depth coverage of autonomous agents, LangChain, LangGraph, RAG architectures, and Vector Databases (Pinecone, Milvus, ChromaDB) alongside distributed risk engines.
 - **Synthesized Web Audio FX**: Tactile sound design powered natively by the Web Audio API (with convenient mute toggle).
 - **100/100 Lighthouse Performance**: Pure semantic HTML5, modern CSS3 variables, and vanilla ES6 with 0ms build overhead and instant GitHub Pages deployment.
 

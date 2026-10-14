@@ -2349,3 +2349,27 @@ textarea.contact-input-element {
     right: 14px !important;
   }
 }
+
+/* Academic Research & Google Scholar Cards */
+.paper-item-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.paper-item-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35) !important;
+}
+
+[data-theme="light"] .paper-item-card {
+  background: rgba(0, 0, 0, 0.02) !important;
+}
+
+[data-theme="light"] .paper-item-card:hover {
+  border-color: rgba(0, 0, 0, 0.22) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .scholar-stats-bar {
+  background: rgba(0, 0, 0, 0.03) !important;
+}
